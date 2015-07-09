@@ -7,6 +7,8 @@
 //
 
 #import "MLTableViewController.h"
+#import "MLTableViewCell.h"
+
 #import "LoremIpsum.h"
 
 @interface MLTableViewController ()
@@ -21,6 +23,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor lightTextColor];
+    
+    [self.tableView registerClass:[MLTableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
     self.contentArray = [@[] mutableCopy];
     for (NSInteger i=0; i<=100; i++) {
         [self.contentArray addObject:[LoremIpsum sentence]];
@@ -36,5 +41,21 @@
 }
 
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(nonnull UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.contentArray count];
+}
+
+- (UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    
+    MLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text = self.contentArray[indexPath.row];
+    return cell;
+}
 
 @end
