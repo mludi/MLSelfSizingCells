@@ -22,13 +22,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = NSLocalizedString(@"Self Sizing", nil);
     self.view.backgroundColor = [UIColor lightTextColor];
     
     [self.tableView registerClass:[MLTableViewCell class] forCellReuseIdentifier:@"Cell"];
     
+    
+    self.tableView.estimatedRowHeight = 68.0f;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    
+    
     self.contentArray = [@[] mutableCopy];
     for (NSInteger i=0; i<=100; i++) {
-        [self.contentArray addObject:[LoremIpsum sentence]];
+        
+        NSDictionary *dictionary = @{
+                                     @"sentence": [LoremIpsum sentence],
+                                     @"name": [LoremIpsum name]
+                                     };
+        
+        [self.contentArray addObject:dictionary];
     }
     
     [self.tableView reloadData];
@@ -54,7 +67,10 @@
     
     
     MLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = self.contentArray[indexPath.row];
+    
+    NSDictionary *dictionary = self.contentArray[indexPath.row];
+    
+    cell.sentenceLabel.text = dictionary[@"sentence"];
     return cell;
 }
 
