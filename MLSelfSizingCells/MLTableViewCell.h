@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MLTableViewCell : UITableViewCell
-
+@property (nonatomic, strong) UILabel *sentenceLabel;
 @end
