@@ -15,6 +15,7 @@
 		39A03F661B4E7AE500069299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */; };
 		39A03F711B4E7AE500069299 /* MLSelfSizingCellsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F701B4E7AE500069299 /* MLSelfSizingCellsTests.m */; };
 		39A03F7C1B4E7AE500069299 /* MLSelfSizingCellsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F7B1B4E7AE500069299 /* MLSelfSizingCellsUITests.m */; };
+		39A03F8B1B4E841900069299 /* MLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F8A1B4E841900069299 /* MLTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		39A03F771B4E7AE500069299 /* MLSelfSizingCellsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLSelfSizingCellsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A03F7B1B4E7AE500069299 /* MLSelfSizingCellsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLSelfSizingCellsUITests.m; sourceTree = "<group>"; };
 		39A03F7D1B4E7AE500069299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39A03F891B4E841900069299 /* MLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTableViewCell.h; sourceTree = "<group>"; };
+		39A03F8A1B4E841900069299 /* MLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */,
 				39A03F671B4E7AE500069299 /* Info.plist */,
 				39A03F561B4E7AE500069299 /* Supporting Files */,
+				39A03F891B4E841900069299 /* MLTableViewCell.h */,
+				39A03F8A1B4E841900069299 /* MLTableViewCell.m */,
 			);
 			path = MLSelfSizingCells;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A03F8B1B4E841900069299 /* MLTableViewCell.m in Sources */,
 				39A03F5E1B4E7AE500069299 /* MLTableViewController.m in Sources */,
 				39A03F5B1B4E7AE500069299 /* AppDelegate.m in Sources */,
 				39A03F581B4E7AE500069299 /* main.m in Sources */,
