@@ -16,6 +16,7 @@
 		39A03F711B4E7AE500069299 /* MLSelfSizingCellsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F701B4E7AE500069299 /* MLSelfSizingCellsTests.m */; };
 		39A03F7C1B4E7AE500069299 /* MLSelfSizingCellsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F7B1B4E7AE500069299 /* MLSelfSizingCellsUITests.m */; };
 		39A03F8B1B4E841900069299 /* MLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F8A1B4E841900069299 /* MLTableViewCell.m */; };
+		39A03F911B4E9A7F00069299 /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F901B4E9A7F00069299 /* LoremIpsum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		39A03F7D1B4E7AE500069299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39A03F891B4E841900069299 /* MLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTableViewCell.h; sourceTree = "<group>"; };
 		39A03F8A1B4E841900069299 /* MLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTableViewCell.m; sourceTree = "<group>"; };
+		39A03F8F1B4E9A7F00069299 /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
+		39A03F901B4E9A7F00069299 /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoremIpsum.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		39A03F551B4E7AE500069299 /* MLSelfSizingCells */ = {
 			isa = PBXGroup;
 			children = (
+				39A03F8C1B4E869C00069299 /* Utils */,
 				39A03F591B4E7AE500069299 /* AppDelegate.h */,
 				39A03F5A1B4E7AE500069299 /* AppDelegate.m */,
 				39A03F5C1B4E7AE500069299 /* MLTableViewController.h */,
@@ -143,6 +147,23 @@
 				39A03F7D1B4E7AE500069299 /* Info.plist */,
 			);
 			path = MLSelfSizingCellsUITests;
+			sourceTree = "<group>";
+		};
+		39A03F8C1B4E869C00069299 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				39A03F8E1B4E9A7F00069299 /* LoremIpsum */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		39A03F8E1B4E9A7F00069299 /* LoremIpsum */ = {
+			isa = PBXGroup;
+			children = (
+				39A03F8F1B4E9A7F00069299 /* LoremIpsum.h */,
+				39A03F901B4E9A7F00069299 /* LoremIpsum.m */,
+			);
+			path = LoremIpsum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39A03F8B1B4E841900069299 /* MLTableViewCell.m in Sources */,
+				39A03F911B4E9A7F00069299 /* LoremIpsum.m in Sources */,
 				39A03F5E1B4E7AE500069299 /* MLTableViewController.m in Sources */,
 				39A03F5B1B4E7AE500069299 /* AppDelegate.m in Sources */,
 				39A03F581B4E7AE500069299 /* main.m in Sources */,
