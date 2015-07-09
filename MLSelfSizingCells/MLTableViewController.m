@@ -6,16 +6,21 @@
 //  Copyright © 2015 Matthias Ludwig. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MLTableViewController.h"
 
-@interface ViewController ()
+@interface MLTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MLTableViewController
+
+#pragma mark - ViewLifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor lightTextColor];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
