@@ -20,18 +20,16 @@
         self.sentenceLabel.numberOfLines = 0;
         
         
-        [self addSubview:self.sentenceLabel];
+        [self.contentView addSubview:self.sentenceLabel];
         
         NSDictionary *viewsDictionary = @{
                                             @"sentenceLabel": self.sentenceLabel
                                           };
 
         
-        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-20-[sentenceLabel]-20-|"                                                                                        options:0                                                                                        metrics:nil                                                                                          views:viewsDictionary]];
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-20-[sentenceLabel]-20-|" options:0 metrics:nil views:viewsDictionary]];
 
-        
-        
-        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[sentenceLabel]-8-|"                                                                                        options:0                                                                                        metrics:nil                                                                                          views:viewsDictionary]];
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-8-[sentenceLabel]-8-|" options:0 metrics:nil views:viewsDictionary]];
 
     }
     
