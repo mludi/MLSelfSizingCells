@@ -526,6 +526,7 @@
 				39A03F821B4E7AE500069299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39A03F831B4E7AE500069299 /* Build configuration list for PBXNativeTarget "MLSelfSizingCellsTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +535,7 @@
 				39A03F851B4E7AE500069299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39A03F861B4E7AE500069299 /* Build configuration list for PBXNativeTarget "MLSelfSizingCellsUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +544,7 @@
 				39A03F881B4E7AE500069299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
