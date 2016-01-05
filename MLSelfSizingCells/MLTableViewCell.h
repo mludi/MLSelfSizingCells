@@ -10,4 +10,5 @@
 
 @interface MLTableViewCell : UITableViewCell
 @property (nonatomic, strong) UILabel *sentenceLabel;
+@property (nonatomic, strong) UILabel *nameLabel;
 @end
