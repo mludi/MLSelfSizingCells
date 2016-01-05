@@ -71,6 +71,7 @@
     NSDictionary *dictionary = self.contentArray[indexPath.row];
     
     cell.sentenceLabel.text = dictionary[@"sentence"];
+    cell.nameLabel.text = dictionary[@"name"];
     return cell;
 }
 
