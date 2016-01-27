@@ -56,13 +56,13 @@
 		39163B861C56701B00CE6ADC /* MLSelfSizingCells_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				395FA1121C58EB7500572BA5 /* Controller */,
+				395FA1151C58EB8E00572BA5 /* Interface */,
+				395FA1171C58EBA000572BA5 /* Model */,
+				395FA1181C58F02B00572BA5 /* Supporting Files */,
 				39163B9B1C56728A00CE6ADC /* Utils */,
-				39163B871C56701B00CE6ADC /* AppDelegate.swift */,
-				39163B891C56701B00CE6ADC /* MLTableViewController.swift */,
-				39163B8E1C56701B00CE6ADC /* Assets.xcassets */,
-				39163B901C56701B00CE6ADC /* LaunchScreen.storyboard */,
-				39163B931C56701B00CE6ADC /* Info.plist */,
-				39163B991C5671D800CE6ADC /* MLTableViewCell.swift */,
+				395FA1131C58EB7B00572BA5 /* ViewController */,
+				395FA1141C58EB8400572BA5 /* Views */,
 			);
 			path = MLSelfSizingCells_Swift;
 			sourceTree = "<group>";
@@ -72,7 +72,7 @@
 			children = (
 				39163B9C1C56728C00CE6ADC /* Lorem Ipsum */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		39163B9C1C56728C00CE6ADC /* Lorem Ipsum */ = {
@@ -80,7 +80,55 @@
 			children = (
 				39163B9D1C5672AC00CE6ADC /* LoremSwiftum.swift */,
 			);
-			name = "Lorem Ipsum";
+			path = "Lorem Ipsum";
+			sourceTree = "<group>";
+		};
+		395FA1121C58EB7500572BA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39163B871C56701B00CE6ADC /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		395FA1131C58EB7B00572BA5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				39163B891C56701B00CE6ADC /* MLTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		395FA1141C58EB8400572BA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39163B991C5671D800CE6ADC /* MLTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		395FA1151C58EB8E00572BA5 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				39163B8E1C56701B00CE6ADC /* Assets.xcassets */,
+				39163B901C56701B00CE6ADC /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		395FA1171C58EBA000572BA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		395FA1181C58F02B00572BA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39163B931C56701B00CE6ADC /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +217,7 @@
 				39163B911C56701B00CE6ADC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -259,7 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MLSelfSizingCells_Swift/Info.plist;
+				INFOPLIST_FILE = "MLSelfSizingCells_Swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sudden-dev.MLSelfSizingCells-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,7 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MLSelfSizingCells_Swift/Info.plist;
+				INFOPLIST_FILE = "MLSelfSizingCells_Swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sudden-dev.MLSelfSizingCells-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
