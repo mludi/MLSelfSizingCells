@@ -8,6 +8,7 @@
 
 #import "MLTableViewController.h"
 #import "MLTableViewCell.h"
+#import "MLModel.h"
 
 #import "LoremIpsum.h"
 
@@ -36,12 +37,12 @@
     self.contentArray = [@[] mutableCopy];
     for (NSInteger i=0; i<=100; i++) {
         
-        NSDictionary *dictionary = @{
-                                     @"sentence": [LoremIpsum sentence],
-                                     @"name": [LoremIpsum name]
-                                     };
+        MLModel *theModel = [[MLModel alloc] init];
+        theModel.sentence = [LoremIpsum sentence];
+        theModel.name = [LoremIpsum name];
+        theModel.imageURLString = @"http://dummyimage.com/80x80/0000ff/ffebff";
         
-        [self.contentArray addObject:dictionary];
+        [self.contentArray addObject:theModel];
     }
     
     [self.tableView reloadData];
@@ -67,11 +68,13 @@
     
     
     MLTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+
+    MLModel *theModel = (MLModel *)self.contentArray[indexPath.row];
     
-    NSDictionary *dictionary = self.contentArray[indexPath.row];
+    cell.sentenceLabel.text = theModel.sentence;
+    cell.nameLabel.text = theModel.name;
+
     
-    cell.sentenceLabel.text = dictionary[@"sentence"];
-    cell.nameLabel.text = dictionary[@"name"];
     return cell;
 }
 

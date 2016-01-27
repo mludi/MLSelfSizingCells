@@ -16,6 +16,8 @@
 		39A03F7C1B4E7AE500069299 /* MLSelfSizingCellsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F7B1B4E7AE500069299 /* MLSelfSizingCellsUITests.m */; };
 		39A03F8B1B4E841900069299 /* MLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F8A1B4E841900069299 /* MLTableViewCell.m */; };
 		39A03F911B4E9A7F00069299 /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F901B4E9A7F00069299 /* LoremIpsum.m */; };
+		39D20F4D1C58C73B0045B512 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D20F4C1C58C73B0045B512 /* ImageDownloader.m */; };
+		39D20F511C58CA510045B512 /* MLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D20F501C58CA510045B512 /* MLModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		39A03F8A1B4E841900069299 /* MLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTableViewCell.m; sourceTree = "<group>"; };
 		39A03F8F1B4E9A7F00069299 /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
 		39A03F901B4E9A7F00069299 /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoremIpsum.m; sourceTree = "<group>"; };
+		39D20F4B1C58C73B0045B512 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		39D20F4C1C58C73B0045B512 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		39D20F4F1C58CA510045B512 /* MLModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLModel.h; sourceTree = "<group>"; };
+		39D20F501C58CA510045B512 /* MLModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		39A03F551B4E7AE500069299 /* MLSelfSizingCells */ = {
 			isa = PBXGroup;
 			children = (
+				39D20F4E1C58CA470045B512 /* Model */,
 				39D20F471C58C61F0045B512 /* Controller */,
 				39D20F4A1C58C6B40045B512 /* Interface */,
 				39A03F561B4E7AE500069299 /* Supporting Files */,
@@ -164,6 +171,8 @@
 			children = (
 				39A03F591B4E7AE500069299 /* AppDelegate.h */,
 				39A03F5A1B4E7AE500069299 /* AppDelegate.m */,
+				39D20F4B1C58C73B0045B512 /* ImageDownloader.h */,
+				39D20F4C1C58C73B0045B512 /* ImageDownloader.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +202,15 @@
 				39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		39D20F4E1C58CA470045B512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39D20F4F1C58CA510045B512 /* MLModel.h */,
+				39D20F501C58CA510045B512 /* MLModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,10 +342,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D20F4D1C58C73B0045B512 /* ImageDownloader.m in Sources */,
 				39A03F8B1B4E841900069299 /* MLTableViewCell.m in Sources */,
 				39A03F911B4E9A7F00069299 /* LoremIpsum.m in Sources */,
 				39A03F5E1B4E7AE500069299 /* MLTableViewController.m in Sources */,
 				39A03F5B1B4E7AE500069299 /* AppDelegate.m in Sources */,
+				39D20F511C58CA510045B512 /* MLModel.m in Sources */,
 				39A03F581B4E7AE500069299 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
