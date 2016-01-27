@@ -27,9 +27,15 @@
         self.nameLabel.font = [UIFont fontWithName:@"SanFranciscoDisplay-Light" size:12.0f];
         [self.contentView addSubview:self.nameLabel];
         
+        self.theImageView = [[UIImageView alloc] init];
+        self.theImageView.translatesAutoresizingMaskIntoConstraints = NO;
+        self.theImageView.contentMode = UIViewContentModeScaleToFill;
+        [self.contentView addSubview:self.theImageView];
+        
         NSDictionary *viewsDictionary = @{
                                             @"sentenceLabel": self.sentenceLabel,
-                                            @"nameLabel": self.nameLabel
+                                            @"nameLabel": self.nameLabel,
+                                            @"theImageView": self.theImageView
                                           };
 
 
@@ -38,10 +44,17 @@
                                                                                         metrics:nil
                                                                                           views:viewsDictionary]];
         
-        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[sentenceLabel]-10-[nameLabel]-20-|"
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[sentenceLabel]-10-[nameLabel]"
                                                                                         options: NSLayoutFormatAlignAllLeading | NSLayoutFormatAlignAllTrailing
                                                                                         metrics:nil
                                                                                           views:viewsDictionary]];
+        
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[nameLabel]-[theImageView(80)]-|" options:kNilOptions metrics:nil views:viewsDictionary]];
+        
+        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[theImageView(80)]" options:kNilOptions metrics:nil views:viewsDictionary]];
+        
+        
+        [[NSLayoutConstraint constraintWithItem:self.theImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0] setActive:YES];
         
         
     }

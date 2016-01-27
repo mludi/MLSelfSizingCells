@@ -11,4 +11,5 @@
 @interface MLTableViewCell : UITableViewCell
 @property (nonatomic, strong) UILabel *sentenceLabel;
 @property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UIImageView *theImageView;
 @end

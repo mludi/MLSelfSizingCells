@@ -11,9 +11,11 @@
 #import "MLModel.h"
 
 #import "LoremIpsum.h"
+#import "ImageDownloader.h"
 
-@interface MLTableViewController ()
+@interface MLTableViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) NSMutableArray *contentArray;
+@property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 @end
 
 @implementation MLTableViewController
@@ -22,6 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.imageDownloadsInProgress = [NSMutableDictionary dictionary];
     
     self.title = NSLocalizedString(@"Self Sizing", nil);
     self.view.backgroundColor = [UIColor lightTextColor];
@@ -49,9 +53,25 @@
  
 }
 
+- (void)terminateAllDownloads {
+    
+//    for (ImageDownloader *theImageDownloader in self.imageDownloadsInProgress) {
+//        [theImageDownloader cancelDownload];
+//    }
+    
+    NSArray *allDownloadsArray = [self.imageDownloadsInProgress allValues];
+    [allDownloadsArray makeObjectsPerformSelector:@selector(cancelDownload)];
+    
+    [self.imageDownloadsInProgress removeAllObjects];
+}
+
+- (void)dealloc {
+    [self terminateAllDownloads];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self terminateAllDownloads];
 }
 
 
@@ -73,9 +93,67 @@
     
     cell.sentenceLabel.text = theModel.sentence;
     cell.nameLabel.text = theModel.name;
+    
+    if(!theModel.image) {
+        if (!self.tableView.dragging && !self.tableView.decelerating) {
+            [self startImageDownload:theModel forIndexPath:indexPath];
+        }
+    }
+    else {
+        cell.theImageView.image = theModel.image;
+    }
 
     
     return cell;
 }
+
+#pragma mark - TableViewCellImageLoadong
+- (void)startImageDownload:(MLModel *)inModel forIndexPath:(NSIndexPath *)inIndexPath {
+    
+    ImageDownloader *theImageDownloader = (ImageDownloader *)self.imageDownloadsInProgress[inIndexPath];
+    if (!theImageDownloader) {
+        theImageDownloader = [[ImageDownloader alloc] init];
+        theImageDownloader.theModel = inModel;
+        [theImageDownloader setCompletionHandler:^{
+           
+            MLTableViewCell *theCell = [self.tableView cellForRowAtIndexPath:inIndexPath];
+            theCell.theImageView.image = inModel.image;            
+            [self.imageDownloadsInProgress removeObjectForKey:inIndexPath];
+            
+        }];
+        
+        self.imageDownloadsInProgress[inIndexPath] = theImageDownloader;
+        [theImageDownloader startDownload];
+    }
+    
+}
+
+- (void)loadImagesForOnScreenRows {
+    
+    if ([self.contentArray count] > 0) {
+        NSArray *theVisibleRows = [self.tableView indexPathsForVisibleRows];
+        
+        for (NSIndexPath *theIndexPath in theVisibleRows) {
+            MLModel *theModel = self.contentArray[theIndexPath.row];
+            
+            if (!theModel.image) {
+                [self startImageDownload:theModel forIndexPath:theIndexPath];
+            }
+        }
+    }
+}
+
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        [self loadImagesForOnScreenRows];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self loadImagesForOnScreenRows];
+}
+
 
 @end
