@@ -10,7 +10,6 @@
 		39A03F581B4E7AE500069299 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F571B4E7AE500069299 /* main.m */; };
 		39A03F5B1B4E7AE500069299 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F5A1B4E7AE500069299 /* AppDelegate.m */; };
 		39A03F5E1B4E7AE500069299 /* MLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F5D1B4E7AE500069299 /* MLTableViewController.m */; };
-		39A03F611B4E7AE500069299 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A03F5F1B4E7AE500069299 /* Main.storyboard */; };
 		39A03F631B4E7AE500069299 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39A03F621B4E7AE500069299 /* Assets.xcassets */; };
 		39A03F661B4E7AE500069299 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */; };
 		39A03F711B4E7AE500069299 /* MLSelfSizingCellsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A03F701B4E7AE500069299 /* MLSelfSizingCellsTests.m */; };
@@ -43,7 +42,6 @@
 		39A03F5A1B4E7AE500069299 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		39A03F5C1B4E7AE500069299 /* MLTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLTableViewController.h; sourceTree = "<group>"; };
 		39A03F5D1B4E7AE500069299 /* MLTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLTableViewController.m; sourceTree = "<group>"; };
-		39A03F601B4E7AE500069299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39A03F621B4E7AE500069299 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39A03F651B4E7AE500069299 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39A03F671B4E7AE500069299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,18 +105,12 @@
 		39A03F551B4E7AE500069299 /* MLSelfSizingCells */ = {
 			isa = PBXGroup;
 			children = (
-				39A03F8C1B4E869C00069299 /* Utils */,
-				39A03F591B4E7AE500069299 /* AppDelegate.h */,
-				39A03F5A1B4E7AE500069299 /* AppDelegate.m */,
-				39A03F5C1B4E7AE500069299 /* MLTableViewController.h */,
-				39A03F5D1B4E7AE500069299 /* MLTableViewController.m */,
-				39A03F5F1B4E7AE500069299 /* Main.storyboard */,
-				39A03F621B4E7AE500069299 /* Assets.xcassets */,
-				39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */,
-				39A03F671B4E7AE500069299 /* Info.plist */,
+				39D20F471C58C61F0045B512 /* Controller */,
+				39D20F4A1C58C6B40045B512 /* Interface */,
 				39A03F561B4E7AE500069299 /* Supporting Files */,
-				39A03F891B4E841900069299 /* MLTableViewCell.h */,
-				39A03F8A1B4E841900069299 /* MLTableViewCell.m */,
+				39A03F8C1B4E869C00069299 /* Utils */,
+				39D20F481C58C6240045B512 /* ViewController */,
+				39D20F491C58C62C0045B512 /* Views */,
 			);
 			path = MLSelfSizingCells;
 			sourceTree = "<group>";
@@ -126,16 +118,17 @@
 		39A03F561B4E7AE500069299 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				39A03F671B4E7AE500069299 /* Info.plist */,
 				39A03F571B4E7AE500069299 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		39A03F6F1B4E7AE500069299 /* MLSelfSizingCellsTests */ = {
 			isa = PBXGroup;
 			children = (
-				39A03F701B4E7AE500069299 /* MLSelfSizingCellsTests.m */,
 				39A03F721B4E7AE500069299 /* Info.plist */,
+				39A03F701B4E7AE500069299 /* MLSelfSizingCellsTests.m */,
 			);
 			path = MLSelfSizingCellsTests;
 			sourceTree = "<group>";
@@ -143,8 +136,8 @@
 		39A03F7A1B4E7AE500069299 /* MLSelfSizingCellsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				39A03F7B1B4E7AE500069299 /* MLSelfSizingCellsUITests.m */,
 				39A03F7D1B4E7AE500069299 /* Info.plist */,
+				39A03F7B1B4E7AE500069299 /* MLSelfSizingCellsUITests.m */,
 			);
 			path = MLSelfSizingCellsUITests;
 			sourceTree = "<group>";
@@ -154,7 +147,7 @@
 			children = (
 				39A03F8E1B4E9A7F00069299 /* LoremIpsum */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		39A03F8E1B4E9A7F00069299 /* LoremIpsum */ = {
@@ -164,6 +157,42 @@
 				39A03F901B4E9A7F00069299 /* LoremIpsum.m */,
 			);
 			path = LoremIpsum;
+			sourceTree = "<group>";
+		};
+		39D20F471C58C61F0045B512 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39A03F591B4E7AE500069299 /* AppDelegate.h */,
+				39A03F5A1B4E7AE500069299 /* AppDelegate.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39D20F481C58C6240045B512 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				39A03F5C1B4E7AE500069299 /* MLTableViewController.h */,
+				39A03F5D1B4E7AE500069299 /* MLTableViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		39D20F491C58C62C0045B512 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39A03F891B4E841900069299 /* MLTableViewCell.h */,
+				39A03F8A1B4E841900069299 /* MLTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		39D20F4A1C58C6B40045B512 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				39A03F621B4E7AE500069299 /* Assets.xcassets */,
+				39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +300,6 @@
 			files = (
 				39A03F661B4E7AE500069299 /* LaunchScreen.storyboard in Resources */,
 				39A03F631B4E7AE500069299 /* Assets.xcassets in Resources */,
-				39A03F611B4E7AE500069299 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,20 +364,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		39A03F5F1B4E7AE500069299 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				39A03F601B4E7AE500069299 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		39A03F641B4E7AE500069299 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				39A03F651B4E7AE500069299 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -439,7 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MLSelfSizingCells/Info.plist;
+				INFOPLIST_FILE = "MLSelfSizingCells/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.dieentwickler.MLSelfSizingCells;
@@ -451,7 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MLSelfSizingCells/Info.plist;
+				INFOPLIST_FILE = "MLSelfSizingCells/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.dieentwickler.MLSelfSizingCells;
